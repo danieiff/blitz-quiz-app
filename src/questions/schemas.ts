@@ -7,7 +7,8 @@ export const CreateQuestionSchema = z.object({
 })
 export const UpdateQuestionSchema = z.object({
   id: z.number(),
-  votes: z.object({ id: z.number(), text: z.string() }),
+  text: z.string(),
+  choices: z.array(z.object({ id: z.number().optional(), text: z.string() })),
   // template: __fieldName__: z.__zodType__(),
 })
 

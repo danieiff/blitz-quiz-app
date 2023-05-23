@@ -42,7 +42,6 @@ export const EditQuestion = () => {
             onSubmit={async (values) => {
               try {
                 const updated = await updateQuestionMutation({
-                  id: question.id,
                   ...values,
                 })
                 await setQueryData(updated)

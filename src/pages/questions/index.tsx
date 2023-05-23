@@ -28,7 +28,7 @@ export const QuestionsList = () => {
           <li key={question.id}>
             <Link href={Routes.ShowQuestionPage({ questionId: question.id })}>{question.text}</Link>
             <ul>
-              {question.choices?.map((choice) => (
+              {question.choices.map((choice) => (
                 <li key={choice.id}>
                   {choice.text} - {choice.votes} votes
                 </li>
